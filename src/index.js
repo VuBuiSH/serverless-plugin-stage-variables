@@ -10,7 +10,7 @@ module.exports = Class.extend({
     this._opts = opts;
 
     this.hooks = {
-      'before:package:finalize': this.addStageVariables.bind(this),
+      'after:package:compileEvents': this.addStageVariables.bind(this),
     };
   },
 
@@ -41,7 +41,7 @@ module.exports = Class.extend({
       Properties: {
         StageName: stage,
         Description: stage,
-        RestApiId: {"Ref": "ApiGatewayRestApi"},
+        RestApiId: "ouf3uihlng",//{"Ref": "ApiGatewayRestApi"},
         DeploymentId: null,
         Variables: variables,
       }
